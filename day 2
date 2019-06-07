@@ -22,3 +22,52 @@ Player2 INTEGER CONSTRAINT UNIQUE CONSTRAINT mat_pla2_fk REFERENCE Player(Player
 MatchDt DATE CONSTRAINT mat_dt_nn NOT NULL,
 Winner INTEGER CONSTRAINT mat_win_fk REFERENCE Person(Winner),
 Score VARCHAR2(30) CONSTRAINT mat_sc_nn NOT NULL);
+
+# assigment-2
+CREATE TABLE Shopper(
+Shopperid INTEGER CONSTRAINT shop_pk PRIMARY KEY,
+ShopperName VARCHAR2(20) CONSTRAINT shop_nn NOT NULL,
+Gender CHAR(6) CONSTRAINT shop_gender_ck CHECK(Gender IN ('Male','Female')),
+MobileNo NUMBER CONSTRAINT shop1_nn NOT NULL,
+Address VARCHAR2(50)
+);
+#ASS-4
+reate table Article(
+  ArCode Char(5) Check (ArCode LIKE 'A%') Primary Key,
+  ArName Varchar2(30) Not Null,
+  Rate Number(8,2),
+  Quantity Number(4)  Default 0 Check (Quantity >=0),
+  Class Char(1) Check (Class In ('A','B','C'))
+);
+#ass-5
+CREATE TABLE Store(
+Name VARCHAR2(20) CONSTRAINT sp_pk PRIMARY KEY,
+Location VARCHAR2(30) CONSTRAINT sp_nn NOT NULL,
+ManagerName VARCHAR2(30) UNIQUE
+);
+#ass-6
+ALTER TABLE Store RENAME COLUMN Name TO StoreName;
+
+#ASS-7 error
+CREATE TABLE Bill(BillNo NUMBER CONSTRAINT acc_pk PRIMARY KEY,
+StoreName VARCHAR2(20) CONSTRAINT acc_stna_fk REFERENCES Bill(StoreName),Shopperid NUMBER CONSTRAINT acc_shop_fk REFERENCES Bill(Shopperid),
+ArCode CHAR(5) CONSTRAINT acc_ar_fk REFERENCES Bill(ArCode), Amount NUMBER,BillDate DATE, Quantity NUMBER(4) DEFAULT 1);
+
+#ASS-8
+CREATE TABLE Supplier(SUpplierid VARCHAR2(6) CONSTRAINT acc_sup_pk PRIMARY KEY,
+Name VARCHAR2(30), ContactNo VARCHAR2(15) CONSTRAINT sup_nn NOT NULL,Emailid VARCHAR2(30));
+
+#ASS-9
+ALTER TABLE Supplier ADD City VARCHAR2(10);
+
+#ASS-10
+ALTER TABLE Supplier DROP (Emailid);
+
+#ASS-11
+CREATE TABLE City(City VARCHAR2(20) CONSTRAINT acc_uk UNIQUE);
+
+#ASS-12
+ALTER TABLE City DROP(City);
+
+#ASS-14
+ALTER TABLE Address MODIFY State VARCHAR2(20);
