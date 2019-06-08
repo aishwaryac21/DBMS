@@ -2,3 +2,7 @@
 INSERT INTO Salesman VALUES (11,'Elizabeth','London');
 #ex-11--insert
 INSERT INTO Product VALUES(110,'Bat',50,'Sports',NULL);
+#EX-19
+UPDATE Product SET PRICE=50 WHERE CATEGORY='Apparel' AND PDESC='Trouser'
+#EX-20
+UPDATE Salesman SET SNAME='Jenny',LOCATION='Bristol'WHERE SID='3'
