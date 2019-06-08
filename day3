@@ -6,3 +6,19 @@ INSERT INTO Product VALUES(110,'Bat',50,'Sports',NULL);
 UPDATE Product SET PRICE=50 WHERE CATEGORY='Apparel' AND PDESC='Trouser'
 #EX-20
 UPDATE Salesman SET SNAME='Jenny',LOCATION='Bristol'WHERE SID='3'
+#EX-21
+DELETE FROM SaleDetail WHERE SALEID='1004'
+#EX-22
+DELETE FROM SaleDetail WHERE QUANTITY>5
+#ass-16
+INSERT INTO Article VALUES('A1001','Mouse',500,0,'C')
+#ass-17
+INSERT INTO Store VALUES('Loyal World','Infy Campus, Mysore','Rohan Kumar')
+#ASS-19
+INSERT INTO Supplier VALUES('S501','Avaya Ltd',9012345678,'Mysore');
+#ASS-34
+INSERT INTO City VALUES('Mysore');
+#ass-35
+INSERT INTO Address VALUES(350,'Electronics City','Mysore',570018,'Karnataka');
+#ass-36
+INSERT INTO Article VALUES('A1002','Keyboard',1000,10,'B');
