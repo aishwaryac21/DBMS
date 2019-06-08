@@ -22,3 +22,16 @@ INSERT INTO City VALUES('Mysore');
 INSERT INTO Address VALUES(350,'Electronics City','Mysore',570018,'Karnataka');
 #ass-36
 INSERT INTO Article VALUES('A1002','Keyboard',1000,10,'B');
+
+##############################################################################################################################
+ASSIGN-20 ERROR
+SELECT DESCR,PRICE FROM Item WHERE Category='HardDisk' AND QtyOnHand=''
+
+ASSIGN-21
+SELECT QuotationId, SName, ItemCode, QuotedPrice, QDate, QStatus FROM Quotation WHERE QStatus='Rejected'
+
+ASSIGN-22
+SELECT Designation,Salary FROM EmpDetails WHERE DESIGNATION IN ('Manager','Billing Staff')
+
+ASSIGN-23
+SELECT ROId,Location FROM RetailOutlet
