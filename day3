@@ -35,3 +35,6 @@ SELECT Designation,Salary FROM EmpDetails WHERE DESIGNATION IN ('Manager','Billi
 
 ASSIGN-23
 SELECT ROId,Location FROM RetailOutlet
+###############################################################################################################################
+#EX--23--ERROR
+SELECT PRODID,PDESC,CATEGORY FROM Product WHERE CATEGORY='Electronics' OR CATEGORY='ELECTRONICS';
